@@ -15,15 +15,16 @@ public class Game2 extends AppCompatActivity {
 
     ImageView imq;
     RadioGroup radAnswer;
-    String strAnswer,a="Bodyslam";
+    String strAnswer;
     Button answer;
     MyAlertDialog objMyAlertDialog;
+    RadioButton rd1,rd2,rd3,rd4;
     MediaPlayer click;
     Question objQuestion;
     int intTime = 1,userChoose,userScore;
     int userChooseArray[],trueAnswer[];
 
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,10 @@ public class Game2 extends AppCompatActivity {
         userChooseArray=new int[11];
         trueAnswer=new int[11];
         setValueTrueAnswer();
+        rd1=(RadioButton)findViewById(R.id.radioButton1);
+        rd2=(RadioButton)findViewById(R.id.radioButton2);
+        rd3=(RadioButton)findViewById(R.id.radioButton3);
+        rd4=(RadioButton)findViewById(R.id.radioButton4);
 
         objQuestion=new Question();
         objQuestion.setOnQuestionChangeListener(new Question.onQuestionChangeListener() {
@@ -43,42 +48,82 @@ public class Game2 extends AppCompatActivity {
                 switch (question.getIntQuestion()){
                     case 1:
                         imq.setImageResource(R.drawable.q4);
+                        rd1.setText(Game2.this.getString(R.string.im10));
+                        rd2.setText(Game2.this.getString(R.string.im1));
+                        rd3.setText(Game2.this.getString(R.string.im3));
+                        rd4.setText(Game2.this.getString(R.string.im4));
                         radAnswer.clearCheck();
                         break;
                     case 2:
                         imq.setImageResource(R.drawable.q10);
+                        rd1.setText(Game2.this.getString(R.string.im10));
+                        rd2.setText(Game2.this.getString(R.string.im1));
+                        rd3.setText(Game2.this.getString(R.string.im3));
+                        rd4.setText(Game2.this.getString(R.string.im8));
                         radAnswer.clearCheck();
                         break;
                     case 3:
                         imq.setImageResource(R.drawable.q8);
+                        rd1.setText(Game2.this.getString(R.string.im9));
+                        rd2.setText(Game2.this.getString(R.string.im8));
+                        rd3.setText(Game2.this.getString(R.string.im2));
+                        rd4.setText(Game2.this.getString(R.string.im1));
                         radAnswer.clearCheck();
                         break;
                     case 4:
                         imq.setImageResource(R.drawable.q6);
+                        rd1.setText(Game2.this.getString(R.string.im10));
+                        rd2.setText(Game2.this.getString(R.string.im1));
+                        rd3.setText(Game2.this.getString(R.string.im6));
+                        rd4.setText(Game2.this.getString(R.string.im7));
                         radAnswer.clearCheck();
                         break;
                     case 5:
                         imq.setImageResource(R.drawable.q3);
+                        rd1.setText(Game2.this.getString(R.string.im3));
+                        rd2.setText(Game2.this.getString(R.string.im9));
+                        rd3.setText(Game2.this.getString(R.string.im6));
+                        rd4.setText(Game2.this.getString(R.string.im4));
                         radAnswer.clearCheck();
                         break;
                     case 6:
                         imq.setImageResource(R.drawable.q1);
+                        rd1.setText(Game2.this.getString(R.string.im7));
+                        rd2.setText(Game2.this.getString(R.string.im10));
+                        rd3.setText(Game2.this.getString(R.string.im6));
+                        rd4.setText(Game2.this.getString(R.string.im1));
                         radAnswer.clearCheck();
                         break;
                     case 7:
                         imq.setImageResource(R.drawable.q9);
+                        rd1.setText(Game2.this.getString(R.string.im8));
+                        rd2.setText(Game2.this.getString(R.string.im9));
+                        rd3.setText(Game2.this.getString(R.string.im3));
+                        rd4.setText(Game2.this.getString(R.string.im5));
                         radAnswer.clearCheck();
                         break;
                     case 8:
                         imq.setImageResource(R.drawable.q5);
+                        rd1.setText(Game2.this.getString(R.string.im6));
+                        rd2.setText(Game2.this.getString(R.string.im5));
+                        rd3.setText(Game2.this.getString(R.string.im4));
+                        rd4.setText(Game2.this.getString(R.string.im2));
                         radAnswer.clearCheck();
                         break;
                     case 9:
                         imq.setImageResource(R.drawable.q2);
+                        rd1.setText(Game2.this.getString(R.string.im9));
+                        rd2.setText(Game2.this.getString(R.string.im1));
+                        rd3.setText(Game2.this.getString(R.string.im2));
+                        rd4.setText(Game2.this.getString(R.string.im3));
                         radAnswer.clearCheck();
                         break;
                     case 10:
                         imq.setImageResource(R.drawable.q7);
+                        rd1.setText(Game2.this.getString(R.string.im1));
+                        rd2.setText(Game2.this.getString(R.string.im8));
+                        rd3.setText(Game2.this.getString(R.string.im5));
+                        rd4.setText(Game2.this.getString(R.string.im7));
                         radAnswer.clearCheck();
                         break;
 
@@ -107,30 +152,6 @@ public class Game2 extends AppCompatActivity {
                         userChoose=4;
                         strAnswer="1";
                         break;
-                    case R.id.radioButton5:
-                        userChoose=5;
-                        strAnswer="1";
-                        break;
-                    case R.id.radioButton6:
-                        userChoose=6;
-                        strAnswer="1";
-                        break;
-                    case R.id.radioButton7:
-                        userChoose=7;
-                        strAnswer="1";
-                        break;
-                    case R.id.radioButton8:
-                        userChoose=8;
-                        strAnswer="1";
-                        break;
-                    case R.id.radioButton9:
-                        userChoose=9;
-                        strAnswer="1";
-                        break;
-                    case R.id.radioButton10:
-                        userChoose=10;
-                        strAnswer="1";
-                        break;
                     default:
                         strAnswer=null;
                         break;
@@ -153,8 +174,6 @@ public class Game2 extends AppCompatActivity {
     private void CheckChooseAnswer(){
         if(strAnswer != null){
             Log.d("Answer","IntTime = "+intTime);
-            Log.d("Answer","\n"+"A = "+a);
-
             checkScore();
             intTime++;
         }
@@ -167,15 +186,15 @@ public class Game2 extends AppCompatActivity {
     private void setValueTrueAnswer(){
 
         trueAnswer[1]=4;
-        trueAnswer[2]=10;
-        trueAnswer[3]=8;
-        trueAnswer[4]=6;
-        trueAnswer[5]=3;
-        trueAnswer[6]=1;
-        trueAnswer[7]=9;
-        trueAnswer[8]=5;
-        trueAnswer[9]=2;
-        trueAnswer[10]=7;
+        trueAnswer[2]=1;
+        trueAnswer[3]=2;
+        trueAnswer[4]=3;
+        trueAnswer[5]=1;
+        trueAnswer[6]=4;
+        trueAnswer[7]=2;
+        trueAnswer[8]=2;
+        trueAnswer[9]=3;
+        trueAnswer[10]=4;
 
 
     }
