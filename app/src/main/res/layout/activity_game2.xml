@@ -9,40 +9,39 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="235dp"
-        android:layout_height="400dp"
+        android:layout_width="330dp"
+        android:layout_height="230dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084"
+        app:layout_constraintVertical_bias="0.051"
         app:srcCompat="@drawable/q4" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="110dp"
-        android:layout_height="480dp"
+        android:layout_width="330dp"
+        android:layout_height="230dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466"
+        app:layout_constraintVertical_bias="0.969"
         app:srcCompat="@color/colorAccent2" />
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="235dp"
-        android:layout_height="80dp"
+        android:layout_width="341dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -53,25 +52,24 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.957" />
 
     <RadioGroup
         android:id="@+id/radAnswer"
         android:layout_width="wrap_content"
-        android:layout_height="480dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466">
+        app:layout_constraintVertical_bias="0.75">
 
         <RadioButton
             android:id="@+id/radioButton1"
@@ -108,61 +106,6 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:text="@string/im4"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="325dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/im5"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="325dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/im6"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="325dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:text="@string/im7"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="325dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/im8"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="325dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/im9"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="325dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/im10"
             tools:layout_editor_absoluteX="61dp"
             tools:layout_editor_absoluteY="325dp" />
 
